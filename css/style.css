@@ -1,0 +1,145 @@
+
+    * {
+    box-sizing: border-box;
+    --color-body-background: #181818;
+    --color-white: #fff;
+    --color-black: #000;
+    --color-red-light: #d63031;
+    --color-red-dark: #B70E21;
+    --color-gray-transparent: rgba(255, 255, 255, .3);
+    --color-gray-contact: #222222;
+}
+
+body {
+    background: var(--color-body-background);
+    color: var(--color-white);
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+}
+
+#banner {
+    display: none;
+}
+
+.container {
+    max-width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5em;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.logo {
+    text-align: center;
+    font-size: 3em;
+}
+
+.logo span {
+    color: var(--color-red-dark);
+}
+
+.contact-wrapper {
+    box-shadow: 0 0 20px 0  var(--color-gray-transparent);
+}
+
+.contact-wrapper > * {
+    padding: 1em;
+}
+
+.contact-form {
+    background: var(--color-gray-contact);
+}
+
+.contact-form form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.contact-form form label {
+    display: block;
+}
+
+.contact-form form p {
+    margin: 0;
+    padding: 1em;
+}
+
+.contact-form form .block {
+    grid-column: 1 / 3;
+}
+
+.contact-form form button,
+.contact-form form input,
+.contact-form form textarea {
+    width: 100%;
+    padding: .7em;
+    border: none;
+    background: none;
+    outline: 0;
+    color: var(--color-white);
+    border-bottom: 1px solid var(--color-red-light);
+}
+
+.contact-form form button {
+    background: var(--color-red-dark);
+    border: 0;
+    text-transform: uppercase;
+    padding: 1em;
+}
+
+.contact-form form button:hover,
+.contact-form form button:focus {
+    background: var(--color-red-light);
+    color: var(--color-white);
+    transition: background-color 1s ease-out;
+    outline: 0;
+}
+
+/* CONTACT INFO */
+.contact-info {
+    background: var(--color-black);
+}
+
+.contact-info h4, .contact-info ul, .contact-info p {
+    text-align: center;
+    margin: 0 0 1rem 0;
+}
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    body {
+        padding: 0 4em;
+    }
+    .contact-wrapper {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+    }
+    .contact-info h4,
+    .contact-info ul,
+    .contact-info p {
+        text-align: left;
+    }
+
+    /* Escritorio pequeño / tablet */
+    @media (min-width: 768px) and (max-width: 991px) {
+        .logo {
+          margin-bottom: 5px;
+        }
+      
+        #banner {
+          display: block;
+          margin: auto;
+          max-width: 100%; /* Establece el ancho máximo de la imagen al 100% del contenedor padre */
+          height: auto;
+          padding: 2%;
+        }
+      }
+}
